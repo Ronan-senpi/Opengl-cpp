@@ -1,2 +1,2 @@
-﻿  FirstApp.cpp
-  FirstApp.vcxproj -> C:\Projects\Opengl-cpp\x64\Debug\FirstApp.exe
+﻿  GLShader.cpp
+c1xx : fatal error C1083: Impossible d'ouvrir le fichier source : '..\Commun\GLShader.cpp' : No such file or directory

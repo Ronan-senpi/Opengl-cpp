@@ -31,9 +31,18 @@ void Display(GLFWwindow* window) {
     static const float triangle[] = {
         //(x,y)
         -0.8f, +0.8f, //1er sommet
+        1.f,0.f,0.f,
         0.0f, -0.8f, // 2eme sommet
-        +0.8f, +0.8f // 3eme sommet
+        0.f,1.f,0.f,
+        0.8f, +0.8f, // 3eme sommet
+        0.f,0.f,1.f
     };
+
+    GLuint program = shader.GetProgram();
+    glUseProgram(program);
+
+    GLint posLocation = glGetAttribLocation(program, "a_Position");
+    glVertexAttribPointer(posLocation, 2, GL_FLOAT, false, sizeof(Vertex), triangle);
     //On indique a OpenGL la structuration des sommets
     //Stride : Interval en octets entre deux sommets
 
